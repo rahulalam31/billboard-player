@@ -26,10 +26,10 @@ jobs:
           node-version: ${{ matrix.node }}
 
       - name: Install modules
-        run: yarn
+        run: npm i
 
       - name: Run crawling
-        run: yarn crawling
+        run: npm script.js
       
       - name: Get current date
         id: date
