@@ -71,14 +71,14 @@ const Home = () => {
           <YoutubeContainer>
             <Youtube
               opts={{ playerVars: { autoplay: 1 } }}
-              videoId={data[index].youtube_id}
+              videoId={data[index].videoId}
               onEnd={() => setIndex(idx => (idx + 1) % data.length)}
             />
           </YoutubeContainer>
           <ItemContainer>
             {data.map((item, _index) => (
               <HomeItem
-                key={item.youtube_id}
+                key={item.videoId}
                 data={item}
                 isFocused={index === _index}
                 onPress={() => setIndex(_index)}

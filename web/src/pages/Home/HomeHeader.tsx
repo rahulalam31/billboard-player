@@ -41,7 +41,7 @@ const IconContainer = styled.div`
 const HomeHeader = () => {
   return (
     <Container>
-      <Title>Billboard Player</Title>
+      <Title>GaanaBoard Player</Title>
       <IconContainer>
         <a href={PLAYSTORE_URL}>
           <Icon path={mdiGooglePlay} size="20px" color={COLORS.white} />

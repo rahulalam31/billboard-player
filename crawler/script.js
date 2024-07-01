@@ -17,6 +17,7 @@ const youtubeSearch = async (query) => {
             params: {
                 key: YOUTUBE_API_KEY,
                 part: 'snippet',
+                order: 'viewCount',
                 q: query,
                 maxResults: 100,
                 regionCode: 'IN',
@@ -42,7 +43,7 @@ const youtubeSearch = async (query) => {
 const updateRecentData = async () => {
     try {
         // Define the search query
-        const query = 'latest hindi song';
+        const query = 'trending hindi song';
 
         // Get YouTube search results
         const youtubeData = await youtubeSearch(query);

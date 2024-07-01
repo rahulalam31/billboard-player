@@ -83,7 +83,9 @@ const Img = styled.img`
 
 const HomeItem: React.FC<HomeScreenItemProps> = props => {
   const { data, isFocused, onPress } = props;
-  const { artist, last_week_rank, name, rank, image } = data;
+  const { channelTitle, last_week_rank, title, rank, videoId } = data;
+  // const imgsrc = videoId;
+  const imgURL = `https://img.youtube.com/vi/${videoId}/default.jpg`;
   const isNew = !last_week_rank;
   const rankDelta = last_week_rank ? last_week_rank - rank : 0;
   const isUp = rankDelta > 0;
@@ -114,10 +116,10 @@ const HomeItem: React.FC<HomeScreenItemProps> = props => {
         </RankDeltaContainer>
       </RankConatiner>
       <NameContainer>
-        <Name>{name}</Name>
-        <Artist>{artist}</Artist>
+        <Name>{title}</Name>
+        <Artist>{channelTitle}</Artist>
       </NameContainer>
-      <Img src={image} />
+      <Img src={imgURL} />
     </Container>
   );
 };
