@@ -39,7 +39,7 @@ jobs:
         uses: EndBug/add-and-commit@v9.0.0
         with:
           add: 'data'
-          author_name: Billboard Crawler
-          author_email: coderhyun476@gmail.com
-          message: 'Billboard Hot 100 crawling at ${{ steps.date.outputs.date }}'
+          author_name: GaanaBoard
+          author_email: tempfemp@gmail.com
+          message: 'GaanaBoard Hot 100 crawling at ${{ steps.date.outputs.date }}'
 
